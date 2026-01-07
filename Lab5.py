@@ -5,11 +5,11 @@
 # *   *
 # *****
 def hollow_square(n):
-    message = "*" * n + ("\n*" + " " * (n-2) + "*") * (n-2)
+    square = "*" * n + ("\n*" + " " * (n-2) + "*") * (n-2)
     if n > 1:
-        message += "\n" + "*" * n
+        square += "\n" + "*" * n
 
-    return message
+    return square
 
 # 1
 # 12
@@ -43,8 +43,11 @@ def sum_of_natural_numbers(n):
 #  *****
 # *******
 def centered_star_pyramid(n):
-    pyramid = " " * (n-1)
-    return ""
+    pyramid = ''
 
-# print(number_pattern(5))
+    for x in range(1, n + 1):
+        pyramid += " " * (n - x) + "*" * (2 * x - 1)
+        if x != n:
+            pyramid += "\n"
 
+    return pyramid
