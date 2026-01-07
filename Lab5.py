@@ -5,7 +5,9 @@
 # *   *
 # *****
 def hollow_square(n):
-    return ""
+    message = "*" * n + ("\n*" + " " * (n-2) + "*") * (n-2) + "\n" + "*" * n
+
+    return message
 
 # 1
 # 12
@@ -25,3 +27,5 @@ def sum_of_natural_numbers(n):
 # *******
 def centered_star_pyramid(n):
     return ""
+
+print(hollow_square(1))
